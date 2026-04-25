@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* CyberNinja — Dark military/tactical theme */
+    --background: 220 16% 4%;
+    --foreground: 210 20% 90%;
+
+    --card: 220 14% 7%;
+    --card-foreground: 210 15% 88%;
+
+    --popover: 220 16% 6%;
+    --popover-foreground: 210 15% 88%;
+
+    --primary: 0 72% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 12% 12%;
+    --secondary-foreground: 210 15% 80%;
+
+    --muted: 220 12% 10%;
+    --muted-foreground: 215 10% 48%;
+
+    --accent: 0 72% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 12% 14%;
+    --input: 220 12% 12%;
+    --ring: 0 72% 55%;
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 16% 3.5%;
+    --sidebar-foreground: 210 15% 80%;
+    --sidebar-primary: 0 72% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 12% 10%;
+    --sidebar-accent-foreground: 210 15% 80%;
+    --sidebar-border: 220 12% 12%;
+    --sidebar-ring: 0 72% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: hsl(220 16% 5%); }
+::-webkit-scrollbar-thumb { background: hsl(220 12% 18%); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(220 12% 25%); }
+
+/* Subtle glow */
+.glow-red { box-shadow: 0 0 20px hsl(0 72% 55% / 0.1); }
+.glow-text { text-shadow: 0 0 12px hsl(0 72% 55% / 0.4); }
+
+/* Fill animation */
+@keyframes fill-bar { from { width: 0%; } }
+.animate-fill { animation: fill-bar 1s ease-out forwards; }
+
+/* Terminal blink */
+@keyframes cursor-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.cursor-blink { animation: cursor-blink 1s step-end infinite; }
