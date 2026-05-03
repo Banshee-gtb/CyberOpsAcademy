@@ -130,7 +130,7 @@ export default function Dashboard() {
                   </div>
                   <Link to={`/lab/${activeMissionData.id}`}>
                     <Button size="sm" className="bg-primary text-primary-foreground text-xs font-bold">
-                      <Terminal className="size-3 mr-1" /> ENTER LAB
+                      <Terminal className="size-3 mr-1" /> CONTINUE LEARNING
                     </Button>
                   </Link>
                 </div>
@@ -166,7 +166,7 @@ export default function Dashboard() {
             <div className="rounded-lg border border-border bg-card/50 p-5">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-base font-bold text-foreground">Campaign Progress</h3>
-                <Link to="/missions" className="text-xs font-mono text-primary hover:underline">View all →</Link>
+                <Link to="/missions" className="text-xs font-mono text-primary hover:underline">View path →</Link>
               </div>
               <div className="space-y-3">
                 {[1, 2, 3, 4, 5].map((ch) => {

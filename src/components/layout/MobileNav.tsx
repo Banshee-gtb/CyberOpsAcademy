@@ -4,11 +4,11 @@ import { cn } from '@/lib/utils';
 
 const NAV = [
   { label: 'Home', path: '/', icon: LayoutDashboard },
-  { label: 'Missions', path: '/missions', icon: Crosshair },
+  { label: 'Learn', path: '/missions', icon: Crosshair },
   { label: 'Lab', path: '/lab', icon: Terminal },
   { label: 'AI', path: '/ai', icon: Bot },
   { label: 'Ranks', path: '/leaderboard', icon: Trophy },
-  { label: 'Profile', path: '/profile', icon: UserCircle },
+  { label: 'Me', path: '/profile', icon: UserCircle },
 ];
 
 export default function MobileNav() {

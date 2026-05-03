@@ -28,6 +28,7 @@ export interface Mission {
   description: string;
   story_intro: string;
   story_outro: string;
+  lesson_content: string;
   tier_required: Tier;
   xp_reward: number;
   is_published: boolean;
@@ -42,6 +43,7 @@ export interface Challenge {
   title: string;
   description: string;
   content: Record<string, unknown>;
+  lesson_content: string;
   xp_reward: number;
   difficulty: string;
   created_at: string;

@@ -8,8 +8,8 @@ import logoImg from '@/assets/cyberninja-logo.png';
 
 const NAV = [
   { label: 'Dashboard', path: '/', icon: LayoutDashboard },
-  { label: 'Missions', path: '/missions', icon: Crosshair },
-  { label: 'Challenge Lab', path: '/lab', icon: Terminal },
+  { label: 'Learning Path', path: '/missions', icon: Crosshair },
+  { label: 'Training Lab', path: '/lab', icon: Terminal },
   { label: 'AI Mentor', path: '/ai', icon: Bot },
   { label: 'Leaderboard', path: '/leaderboard', icon: Trophy },
   { label: 'Profile', path: '/profile', icon: UserCircle },
