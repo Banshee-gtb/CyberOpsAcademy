@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { Code2, Terminal, BookOpen, Zap, ChevronDown, Shield, Cpu } from 'lucide-react';
+import { Code2, Terminal, ChevronDown, Shield, Cpu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import CodeEditor from '@/components/features/CodeEditor';
 import CyberTerminal from '@/components/features/CyberTerminal';
@@ -8,7 +8,7 @@ const SANDBOX_TEMPLATES = [
   {
     id: 'password_checker',
     name: 'Password Strength Checker',
-    icon: '🔒',
+    icon: '\u{1F512}',
     language: 'python',
     description: 'Write a function to evaluate password strength based on length, complexity, and common patterns.',
     code: `import re
@@ -57,7 +57,7 @@ print(check_password_strength("MyP@ssw0rd!2024"))`,
   {
     id: 'url_analyzer',
     name: 'Phishing URL Detector',
-    icon: '🎣',
+    icon: '\u{1F3A3}',
     language: 'python',
     description: 'Build a function that analyzes URLs for phishing indicators like lookalike domains and suspicious patterns.',
     code: `import re
@@ -117,7 +117,7 @@ print(analyze_url("http://192.168.1.100/paypal/login.php"))`,
   {
     id: 'log_analyzer',
     name: 'Security Log Analyzer',
-    icon: '📊',
+    icon: '\u{1F4CA}',
     language: 'python',
     description: 'Parse and analyze security logs to detect brute force attacks and suspicious activity.',
     code: `from collections import Counter
@@ -189,7 +189,7 @@ print(result)`,
   {
     id: 'sqli_detector',
     name: 'SQL Injection Detector',
-    icon: '💉',
+    icon: '\u{1FA78}',
     language: 'python',
     description: 'Build a function that detects common SQL injection patterns in user input.',
     code: `import re
@@ -247,22 +247,22 @@ def detect_sqli(user_input: str) -> dict:
     }
 
 # Test inputs
-print(detect_sqli("admin"))  # Normal
-print(detect_sqli("' OR 1=1--"))  # Injection
-print(detect_sqli("'; DROP TABLE users--"))  # Destructive`,
+print(detect_sqli("admin"))
+print(detect_sqli("' OR 1=1--"))
+print(detect_sqli("'; DROP TABLE users--"))`,
     testCases: [
-      { input: '"admin"', expected: 'not malicious', description: 'Normal username should be safe' },
-      { input: '"\\' OR 1=1--"', expected: 'malicious, HIGH risk', description: 'Classic SQL injection bypass' },
-      { input: '"\\'; DROP TABLE users--"', expected: 'malicious, CRITICAL risk', description: 'Destructive SQL injection' },
+      { input: "admin", expected: "not malicious", description: "Normal username should be safe" },
+      { input: "single-quote OR 1=1--", expected: "malicious, HIGH risk", description: "Classic SQL injection bypass" },
+      { input: "single-quote; DROP TABLE users--", expected: "malicious, CRITICAL risk", description: "Destructive SQL injection" },
     ],
   },
   {
     id: 'blank',
     name: 'Blank Script',
-    icon: '📝',
+    icon: '\u{1F4DD}',
     language: 'python',
-    description: 'Start from scratch — write any Python script you want.',
-    code: `# CyberNinja Sandbox — Write your code here
+    description: 'Start from scratch \u2014 write any Python script you want.',
+    code: `# CyberNinja Sandbox \u2014 Write your code here
 # 
 # Ideas:
 # - Build a port scanner simulator
@@ -735,7 +735,7 @@ export default function SandboxPage() {
             </div>
             <CyberTerminal
               environment="operator@cyberNinja-lab"
-              objective="Free exploration mode — run any command to practice your skills"
+              objective="Free exploration mode \u2014 run any command to practice your skills"
               commands={SANDBOX_TERMINAL_COMMANDS}
               flag=""
               hint="Try: nmap 192.168.1.0/24 | whois cyberNinja-target.com | dig cyberNinja-target.com any | nikto -h http://192.168.1.10"
