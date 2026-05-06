@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Crosshair, Terminal, Trophy, UserCircle, Bot, LogOut } from 'lucide-react';
+import { LayoutDashboard, Crosshair, Terminal, Trophy, UserCircle, Bot, LogOut, FlaskConical } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
 import { signOut } from '@/lib/auth';
@@ -10,6 +10,7 @@ const NAV = [
   { label: 'Dashboard', path: '/', icon: LayoutDashboard },
   { label: 'Learning Path', path: '/missions', icon: Crosshair },
   { label: 'Training Lab', path: '/lab', icon: Terminal },
+  { label: 'Sandbox', path: '/sandbox', icon: FlaskConical },
   { label: 'AI Mentor', path: '/ai', icon: Bot },
   { label: 'Leaderboard', path: '/leaderboard', icon: Trophy },
   { label: 'Profile', path: '/profile', icon: UserCircle },

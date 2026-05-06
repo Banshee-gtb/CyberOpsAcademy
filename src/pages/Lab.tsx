@@ -491,6 +491,7 @@ export default function LabPage() {
                     language={(c.language as string) || 'python'}
                     starterCode={(c.starterCode as string) || ''}
                     testCases={c.testCases as { input: string; expected: string; description: string }[]}
+                    challengeDescription={selected.description}
                     onSubmit={() => markComplete(selected.id, selected.xp_reward)}
                     completed={isCompleted(selected.id)}
                   />

@@ -1,13 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Crosshair, Terminal, Bot, Trophy, UserCircle } from 'lucide-react';
+import { LayoutDashboard, Crosshair, Terminal, Bot, FlaskConical, UserCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const NAV = [
   { label: 'Home', path: '/', icon: LayoutDashboard },
   { label: 'Learn', path: '/missions', icon: Crosshair },
   { label: 'Lab', path: '/lab', icon: Terminal },
+  { label: 'Sandbox', path: '/sandbox', icon: FlaskConical },
   { label: 'AI', path: '/ai', icon: Bot },
-  { label: 'Ranks', path: '/leaderboard', icon: Trophy },
   { label: 'Me', path: '/profile', icon: UserCircle },
 ];
 

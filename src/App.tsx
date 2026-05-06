@@ -12,6 +12,7 @@ const LabPage = lazy(() => import('@/pages/Lab'));
 const LeaderboardPage = lazy(() => import('@/pages/Leaderboard'));
 const ProfilePage = lazy(() => import('@/pages/Profile'));
 const AiMentorPage = lazy(() => import('@/pages/AiMentor'));
+const SandboxPage = lazy(() => import('@/pages/Sandbox'));
 
 function LoadingScreen() {
   return (
@@ -52,6 +53,7 @@ export default function App() {
             <Route path="/leaderboard" element={<LeaderboardPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/ai" element={<AiMentorPage />} />
+            <Route path="/sandbox" element={<SandboxPage />} />
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
